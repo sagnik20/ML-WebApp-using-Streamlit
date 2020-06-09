@@ -90,7 +90,7 @@ def main():
         st.sidebar.subheader("Model Hyperparameters")
         n_estimators=st.sidebar.number_input("The number of trees in the forest",100,5000,step = 10,key='n_estimator')
         max_depth = st.sidebar.number_input("The maximum depth",1,20,step=1,key="max_depth")
-        bootstrap = st.sidebar.multiselect("Bootstrap samples ",('True','False'),key='bootstrap')
+        bootstrap = st.sidebar.radio("Bootstrap samples ",('True','False'),key='bootstrap')
 
         metrics = st.sidebar.multiselect("What metrices to plot?", ('Confusion Matrix','ROC Curve','Precision-Recall Curve'))
 
