@@ -21,7 +21,7 @@ def main():
         label = LabelEncoder()
         for col in data.columns:
             data[col] = label.fit_transform(data[col])
-        return 
+        return data
         
     @st.cache(persist=True)
     def split(df):
